@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Mylist Testpage</title>
+    </head>
+    <body>
+        <p id="username">ユーザデータが存在しません！</p>
+        <form id="form" method="post">
+            商品名<input type="text" id="name" name="name" required/><br>
+            画像<input type="file" id="pic" name="pic" accept="image/*" required/><br>
+            メモ<input type="text" id="memo" name="memo"><br>
+            <button type="submit" id="btn">マイリストに登録</button>
+        </form>
+        <p id="msg"></p>
+        <a href="mylist.html">マイリスト一覧へ</a>
+    </body>
+    <script src="./script/addmylist.js"></script>
+</html>

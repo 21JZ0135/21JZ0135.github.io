@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>API Version</title>
+    </head>
+    <body>
+        <p id="access"></p>
+        <p id="version">Getting version now...</p>
+        <p id="err"></p>
+        <a href="#" onclick="window.history.back(); return false;">戻る</a>
+    </body>
+    <script>
+        var version = document.getElementById('version');
+        const request = new XMLHttpRequest();
+        const BASE_URL = 'http://54.64.10.17:8080/api';
+
+        request.open('get', BASE_URL + '/version');
+        request.send();
+
+        document.getElementById('access').textContent = BASE_URL + '/version'
+
+        request.addEventListener('readystatechange', () => {
+            if(request.readyState === 4) {
+                if(request.status === 200) {
+                    console.log(request.response);
+                    version.textContent = request.response;
+                } else {
+                    version.textContent = 'Failed to getting version. Response:';
+                    document.getElementById('err').textContent = request.response;
+                }
+            }
+        })
+    </script>
+</html>

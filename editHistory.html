@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edit History Testpage</title>
+    </head>
+    <body>
+        <p id="msg">対象を検索中・・・</p>
+        <table id="target">
+            <tbody>
+                <tr>
+                    <td>名前</td>
+                    <td>画像</td>
+                    <td>メモ</td>
+                    <td>日時</td>
+                </tr>    
+            </tbody>
+        </table>
+
+        <form id="edit" method="post">
+            名前<input type="text" id="name" name="name"><br>
+            メモ<input type="text" id="memo" name="memo" disabled>
+            <input type="checkbox" id="noedit" name="noedit" checked>メモを編集しない<br>
+            日時<input type="datetime-local" id="datetime" name="datetime"><br>
+            <button type="submit" id="btn">編集確定</button><br>
+        </form>
+        <a href="timeline.html">飲酒履歴一覧へ</a>
+    </body>
+    <script src="./script/edithistory.js"></script>
+</html>

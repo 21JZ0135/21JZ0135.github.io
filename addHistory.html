@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add History Testpage</title>
+    </head>
+    <body>
+        <p id="title">飲酒履歴を登録します</p>
+        <form id="form" method="post">
+            名前<input type="text" id="name" name="name" required><br>
+            メモ<input type="text" id="memo" name="memo"><br>
+            日時<input type="datetime-local" id="datetime" name="datetime" required><br>
+            <input type="hidden" id="img" name="img" readonly required>
+            <button type="submit" id="btn" name="btn">登録</button>
+        </form>
+        <p id="msg"></p>
+        <button type="button" onclick="window.close(); return false;">このウィンドウを閉じる</button>
+    </body>
+    <script src="./script/addhistory.js"></script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UserEdit Testpage</title>
+    </head>
+    <body>
+        <p id="username">ユーザが指定されていません！</p>
+        <form id="edit" method="post">
+            ログインID<input type="text" id="loginid" name="loginid"><br>
+            パスワード<input type="password" id="pw" name="pw"><br>
+            表示名<input type="text" id="dpname" name="dpname"><br>
+            アイコン<input type="file" id="icon" name="icon" accept="image/*"/><br>
+            <button type="button" onclick="resetIcon()">選択した画像をリセット</button>
+            <input type="checkbox" id="delicon">初期アイコンに戻す<br>
+            メアド<input type="email" id="mail" name="mail"><br>
+            <button type="submit" id="btn">編集確定</button>
+        </form>
+        <div id="area_msg"><p id="msg"></p></div>
+        <a href="userpage.html">ユーザーページへ</a>
+    </body>
+    <script src="./script/sha256.js"></script>
+    <script src="./script/useredit.js"></script>
+</html>

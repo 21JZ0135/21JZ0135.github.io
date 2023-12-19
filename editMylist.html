@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edit Mylist Testpage</title>
+    </head>
+    <body>
+        <p id="msg">対象を検索中・・・</p>
+        <table id="target">
+            <tbody>
+                <tr>
+                    <td>商品名</td>
+                    <td>画像</td>
+                    <td>メモ</td>
+                </tr>    
+            </tbody>
+        </table>
+
+        <form id="edit" method="post">
+            商品名<input type="text" id="name" name="name"><br>
+            画像<input type="file" id="img" name="img" accept="image/*"><br>
+            <button type="button" onclick="resetImg()">選択した画像をリセット</button><br>
+            メモ<input type="text" id="memo" name="memo" disabled>
+            <input type="checkbox" id="noedit" name="noedit" checked>メモを編集しない<br>
+            <button type="submit" id="btn">編集確定</button><br>
+        </form>
+        <a href="mylist.html">マイリスト一覧へ</a>
+    </body>
+    <script src="./script/editmylist.js"></script>
+</html>
